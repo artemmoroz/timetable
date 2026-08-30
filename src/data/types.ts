@@ -14,7 +14,7 @@ export interface Lesson {
 export interface Kid {
   id: string
   name: string
-  grade: string
+  homeroom: string
   color: string
   lessons: Lesson[]
 }

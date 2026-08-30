@@ -16,82 +16,86 @@ function buildLessons(kidId: string, rows: LessonRow[]): Lesson[] {
   }))
 }
 
-// TODO: podmień poniższe dane na prawdziwy plan lekcji.
+// Szkoła Podstawowa im. Marii Skłodowskiej-Curie w Wilczycach, Wrocław, ul. Wrocławska 15
 
-const dziecko1Rows: LessonRow[] = [
+const klasa1bRows: LessonRow[] = [
   // Poniedziałek
-  [1, '08:00', '08:45', 'Matematyka', 'Sala 12', 'p. Kowalska'],
-  [1, '08:55', '09:40', 'Język polski', 'Sala 12', 'p. Nowak'],
-  [1, '09:50', '10:35', 'Przyroda', 'Sala 5', 'p. Zielińska'],
-  [1, '10:55', '11:40', 'Wychowanie fizyczne', 'Sala gimnastyczna', 'p. Wójcik'],
-  [1, '11:50', '12:35', 'Język angielski', 'Sala 8', 'p. Lewandowska'],
+  [1, '12:30', '13:15', 'Edukacja wczesnoszkolna', 'A205', 'Balicka Kamila'],
+  [1, '13:35', '14:20', 'Edukacja wczesnoszkolna', 'A205', 'Balicka Kamila'],
+  [1, '14:25', '15:10', 'Edukacja wczesnoszkolna', 'A205', 'Balicka Kamila'],
+  [1, '15:15', '16:00', 'Edukacja wczesnoszkolna', 'A205', 'Balicka Kamila'],
+  [1, '16:05', '16:50', 'Etyka', 'A205', 'Balicka Kamila'],
   // Wtorek
-  [2, '08:00', '08:45', 'Historia', 'Sala 3', 'p. Kamiński'],
-  [2, '08:55', '09:40', 'Matematyka', 'Sala 12', 'p. Kowalska'],
-  [2, '09:50', '10:35', 'Plastyka', 'Sala plastyczna', 'p. Dąbrowska'],
-  [2, '10:55', '11:40', 'Język polski', 'Sala 12', 'p. Nowak'],
-  [2, '11:50', '12:35', 'Informatyka', 'Pracownia komputerowa', 'p. Wiśniewski'],
+  [2, '12:30', '13:15', 'Język angielski', 'A205', 'Stawarz-Czerniec Monika'],
+  [2, '13:35', '14:20', 'Edukacja wczesnoszkolna', 'A205', 'Balicka Kamila'],
+  [2, '14:25', '15:10', 'Wychowanie fizyczne', 'HS', 'Śnieżawska Gabiela'],
+  [2, '15:15', '16:00', 'Edukacja wczesnoszkolna', 'A205', 'Balicka Kamila'],
+  [2, '16:05', '16:50', 'Zajęcia rozwijające artystyczne', 'A205', 'Balicka Kamila'],
   // Środa
-  [3, '08:00', '08:45', 'Język angielski', 'Sala 8', 'p. Lewandowska'],
-  [3, '08:55', '09:40', 'Muzyka', 'Sala muzyczna', 'p. Kaczmarek'],
-  [3, '09:50', '10:35', 'Matematyka', 'Sala 12', 'p. Kowalska'],
-  [3, '10:55', '11:40', 'Religia', 'Sala 6', 'p. Piotrowski'],
-  [3, '11:50', '12:35', 'Wychowanie fizyczne', 'Sala gimnastyczna', 'p. Wójcik'],
+  [3, '11:25', '12:10', 'Edukacja wczesnoszkolna', 'A205', 'Balicka Kamila'],
+  [3, '12:30', '13:15', 'Wychowanie fizyczne', 'HS', 'Śnieżawska Gabiela'],
+  [3, '13:35', '14:20', 'Edukacja wczesnoszkolna', 'A205', 'Balicka Kamila'],
+  [3, '14:25', '15:10', 'Edukacja wczesnoszkolna', 'A205', 'Balicka Kamila'],
   // Czwartek
-  [4, '08:00', '08:45', 'Przyroda', 'Sala 5', 'p. Zielińska'],
-  [4, '08:55', '09:40', 'Język polski', 'Sala 12', 'p. Nowak'],
-  [4, '09:50', '10:35', 'Matematyka', 'Sala 12', 'p. Kowalska'],
-  [4, '10:55', '11:40', 'Historia', 'Sala 3', 'p. Kamiński'],
-  [4, '11:50', '12:35', 'Godzina wychowawcza', 'Sala 12', 'p. Kowalska'],
+  [4, '07:55', '08:40', 'Język angielski', 'A205', 'Stawarz-Czerniec Monika'],
+  [4, '08:50', '09:35', 'Edukacja wczesnoszkolna', 'A205', 'Balicka Kamila'],
+  [4, '09:45', '10:30', 'Edukacja wczesnoszkolna', 'A205', 'Balicka Kamila'],
+  [4, '10:35', '11:20', 'Edukacja wczesnoszkolna', 'A205', 'Balicka Kamila'],
+  [4, '11:25', '12:10', 'Religia', 'A205', 'Kruczek Agata'],
   // Piątek
-  [5, '08:00', '08:45', 'Język angielski', 'Sala 8', 'p. Lewandowska'],
-  [5, '08:55', '09:40', 'Matematyka', 'Sala 12', 'p. Kowalska'],
-  [5, '09:50', '10:35', 'Język polski', 'Sala 12', 'p. Nowak'],
-  [5, '10:55', '11:40', 'Wychowanie fizyczne', 'Sala gimnastyczna', 'p. Wójcik'],
+  [5, '07:55', '08:40', 'Edukacja wczesnoszkolna', 'A205', 'Balicka Kamila'],
+  [5, '08:50', '09:35', 'Edukacja wczesnoszkolna', 'A205', 'Balicka Kamila'],
+  [5, '09:45', '10:30', 'Wychowanie fizyczne', 'HS', 'Śnieżawska Gabiela'],
+  [5, '10:35', '11:20', 'Edukacja wczesnoszkolna', 'A205', 'Balicka Kamila'],
+  [5, '11:25', '12:10', 'Edukacja wczesnoszkolna', 'A205', 'Balicka Kamila'],
 ]
 
-const dziecko2Rows: LessonRow[] = [
+const klasa4cRows: LessonRow[] = [
   // Poniedziałek
-  [1, '08:00', '08:45', 'Język polski', 'Sala 4', 'p. Szymańska'],
-  [1, '08:55', '09:40', 'Matematyka', 'Sala 7', 'p. Woźniak'],
-  [1, '09:50', '10:35', 'Wychowanie fizyczne', 'Sala gimnastyczna', 'p. Wójcik'],
-  [1, '10:55', '11:40', 'Muzyka', 'Sala muzyczna', 'p. Kaczmarek'],
+  [1, '09:45', '10:30', 'Matematyka', 'A002', 'Kubot Joanna'],
+  [1, '10:35', '11:20', 'Wychowanie fizyczne', 'HS', 'Nowosielska Agnieszka'],
+  [1, '11:25', '12:10', 'Język angielski', 'A204', 'Felkner Agnieszka'],
+  [1, '12:30', '13:15', 'Informatyka', 'A101', 'Loranty Justyna'],
+  [1, '13:35', '14:20', 'Język polski', 'A202', 'Rauchut Katarzyna'],
+  [1, '14:25', '15:10', 'Przyroda', 'A201', 'Dudkiewicz-Krysiak Anna'],
+  [1, '15:15', '16:00', 'Plastyka', 'A103', 'Lisicka Anna'],
   // Wtorek
-  [2, '08:00', '08:45', 'Matematyka', 'Sala 7', 'p. Woźniak'],
-  [2, '08:55', '09:40', 'Przyroda', 'Sala 5', 'p. Zielińska'],
-  [2, '09:50', '10:35', 'Język angielski', 'Sala 9', 'p. Mazur'],
-  [2, '10:55', '11:40', 'Plastyka', 'Sala plastyczna', 'p. Dąbrowska'],
+  [2, '09:45', '10:30', 'Matematyka', 'A002', 'Kubot Joanna'],
+  [2, '10:35', '11:20', 'Język polski', 'A206', 'Rauchut Katarzyna'],
+  [2, '11:25', '12:10', 'Wychowanie fizyczne', 'HS', 'Nowosielska Agnieszka'],
+  [2, '12:30', '13:15', 'Religia', 'A205', 'Kruczek Agata'],
   // Środa
-  [3, '08:00', '08:45', 'Język polski', 'Sala 4', 'p. Szymańska'],
-  [3, '08:55', '09:40', 'Historia', 'Sala 3', 'p. Kamiński'],
-  [3, '09:50', '10:35', 'Matematyka', 'Sala 7', 'p. Woźniak'],
-  [3, '10:55', '11:40', 'Wychowanie fizyczne', 'Sala gimnastyczna', 'p. Wójcik'],
-  [3, '11:50', '12:35', 'Religia', 'Sala 6', 'p. Piotrowski'],
+  [3, '08:50', '09:35', 'Język angielski', 'A204', 'Felkner Agnieszka'],
+  [3, '09:45', '10:30', 'Wychowanie fizyczne', 'HS', 'Nowosielska Agnieszka'],
+  [3, '10:35', '11:20', 'Matematyka', 'A202', 'Kubot Joanna'],
+  [3, '11:25', '12:10', 'Zajęcia praktyczno-techniczne', 'A003', 'Jaworska Joanna'],
+  [3, '12:30', '13:15', 'Edukacja zdrowotna', 'A002', 'Nowosielska Agnieszka'],
+  [3, '13:35', '14:20', 'Przyroda', 'A106', 'Dudkiewicz-Krysiak Anna'],
   // Czwartek
-  [4, '08:00', '08:45', 'Język angielski', 'Sala 9', 'p. Mazur'],
-  [4, '08:55', '09:40', 'Matematyka', 'Sala 7', 'p. Woźniak'],
-  [4, '09:50', '10:35', 'Język polski', 'Sala 4', 'p. Szymańska'],
-  [4, '10:55', '11:40', 'Informatyka', 'Pracownia komputerowa', 'p. Wiśniewski'],
+  [4, '08:50', '09:35', 'Godzina wychowawcza', 'A203', 'Nowosielska Agnieszka'],
+  [4, '09:45', '10:30', 'Wychowanie fizyczne', 'HS', 'Nowosielska Agnieszka'],
+  [4, '10:35', '11:20', 'Matematyka', 'A202', 'Kubot Joanna'],
+  [4, '11:25', '12:10', 'Język polski', 'A002', 'Rauchut Katarzyna'],
   // Piątek
-  [5, '08:00', '08:45', 'Przyroda', 'Sala 5', 'p. Zielińska'],
-  [5, '08:55', '09:40', 'Język polski', 'Sala 4', 'p. Szymańska'],
-  [5, '09:50', '10:35', 'Matematyka', 'Sala 7', 'p. Woźniak'],
-  [5, '10:55', '11:40', 'Godzina wychowawcza', 'Sala 4', 'p. Szymańska'],
+  [5, '07:55', '08:40', 'Język angielski', 'A101', 'Felkner Agnieszka'],
+  [5, '08:50', '09:35', 'Historia', 'A105', 'Idzikowski Juliusz'],
+  [5, '09:45', '10:30', 'Język polski', 'A203', 'Rauchut Katarzyna'],
+  [5, '10:35', '11:20', 'Muzyka', 'A204', 'Piecha Marianna'],
 ]
 
 export const kids: Kid[] = [
   {
-    id: 'dziecko-1',
-    name: 'Dziecko 1',
-    grade: 'klasa 5b',
+    id: '1b',
+    name: '1b',
+    homeroom: 'Wychowawca: Paulina Harapiuk',
     color: '#007AFF',
-    lessons: buildLessons('dziecko-1', dziecko1Rows),
+    lessons: buildLessons('1b', klasa1bRows),
   },
   {
-    id: 'dziecko-2',
-    name: 'Dziecko 2',
-    grade: 'klasa 2a',
+    id: '4c',
+    name: '4c',
+    homeroom: 'Wychowawca: Nowosielska Agnieszka',
     color: '#AF52DE',
-    lessons: buildLessons('dziecko-2', dziecko2Rows),
+    lessons: buildLessons('4c', klasa4cRows),
   },
 ]

@@ -20,16 +20,16 @@ export function TabBar({ kids, activeKidId, onSelect }: TabBarProps) {
               className="tap-scale flex flex-1 flex-col items-center gap-1 py-2"
             >
               <span
-                className="flex h-7 w-7 items-center justify-center rounded-full text-[13px] font-bold text-white"
+                className="flex h-7 w-7 items-center justify-center rounded-full text-[11px] font-bold text-white"
                 style={{ background: active ? kid.color : 'var(--color-ios-label-tertiary)' }}
               >
-                {kid.name.charAt(0)}
+                {kid.name.toUpperCase()}
               </span>
               <span
                 className="text-[11px] font-medium"
                 style={{ color: active ? 'var(--color-ios-blue)' : 'var(--color-ios-label-secondary)' }}
               >
-                {kid.name}
+                Klasa {kid.name}
               </span>
             </button>
           )

@@ -28,7 +28,7 @@ function App() {
       <div className="flex min-h-dvh flex-col bg-[var(--color-ios-bg)]">
         <NavBar
           title="Tryb rodzica"
-          subtitle={activeKid.name}
+          subtitle={`Klasa ${activeKid.name}`}
           trailing={
             <button
               type="button"
@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div className="min-h-dvh bg-[var(--color-ios-bg)]">
-      <NavBar title={kid.name} subtitle={kid.grade} onTitleTap={enterParentMode} />
+      <NavBar title={`Klasa ${kid.name}`} subtitle={kid.homeroom} onTitleTap={enterParentMode} />
       <KidSchedule key={kid.id} kid={kid} />
     </div>
   )

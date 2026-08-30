@@ -24,17 +24,17 @@ export function KidPickerScreen({ kids, onSelect, onTitleTap }: KidPickerScreenP
               className="tap-scale flex items-center gap-4 rounded-2xl bg-[var(--color-ios-card)] p-4 text-left shadow-sm"
             >
               <span
-                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-[20px] font-bold text-white"
+                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-[17px] font-bold text-white"
                 style={{ background: kid.color }}
               >
-                {kid.name.charAt(0)}
+                {kid.name.toUpperCase()}
               </span>
               <span className="min-w-0 flex-1">
                 <span className="block truncate text-[17px] font-semibold text-[var(--color-ios-label)]">
-                  {kid.name}
+                  Klasa {kid.name}
                 </span>
                 <span className="block truncate text-[13px] text-[var(--color-ios-label-secondary)]">
-                  {kid.grade}
+                  {kid.homeroom}
                 </span>
               </span>
               <span className="text-[20px] text-[var(--color-ios-label-tertiary)]">›</span>

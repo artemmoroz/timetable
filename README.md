@@ -14,7 +14,8 @@ Każdy wiersz to jedna lekcja w formacie:
 
 gdzie `dzień`: `1` = poniedziałek, `2` = wtorek, ..., `7` = niedziela.
 
-Aby zmienić imiona dzieci, edytuj pola `name` i `grade` w obiektach `kids` na końcu tego pliku.
+Aby zmienić klasy, edytuj pola `name` (np. `1b`) i `homeroom` (wychowawca) w obiektach `kids`
+na końcu tego pliku.
 
 ## Tryb rodzica
 
