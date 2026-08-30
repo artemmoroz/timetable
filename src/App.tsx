@@ -7,23 +7,29 @@ import { KidSchedule } from './components/KidSchedule'
 import { TabBar } from './components/TabBar'
 
 const STORAGE_KEY = 'timetable:selectedKidId'
+const PARENT_MODE_STORAGE_KEY = 'timetable:parentMode'
 
 function App() {
   const [selectedKidId, setSelectedKidId] = useState<string | null>(() =>
     localStorage.getItem(STORAGE_KEY),
   )
-  const [parentMode, setParentMode] = useState(false)
-  const [activeParentKidId, setActiveParentKidId] = useState<string>(selectedKidId ?? kids[0].id)
+  const [parentMode, setParentMode] = useState<boolean>(
+    () => localStorage.getItem(PARENT_MODE_STORAGE_KEY) === '1',
+  )
 
   useEffect(() => {
     if (selectedKidId) localStorage.setItem(STORAGE_KEY, selectedKidId)
   }, [selectedKidId])
 
+  useEffect(() => {
+    localStorage.setItem(PARENT_MODE_STORAGE_KEY, parentMode ? '1' : '0')
+  }, [parentMode])
+
   const enterParentMode = useMultiTap(3, () => setParentMode(true))
   const exitParentMode = () => setParentMode(false)
 
   if (parentMode) {
-    const activeKid = kids.find((k) => k.id === activeParentKidId) ?? kids[0]
+    const activeKid = kids.find((k) => k.id === selectedKidId) ?? kids[0]
     return (
       <div className="flex min-h-dvh flex-col bg-[var(--color-ios-bg)]">
         <NavBar
@@ -42,7 +48,7 @@ function App() {
         <div className="flex-1 overflow-y-auto">
           <KidSchedule key={activeKid.id} kid={activeKid} />
         </div>
-        <TabBar kids={kids} activeKidId={activeKid.id} onSelect={setActiveParentKidId} />
+        <TabBar kids={kids} activeKidId={activeKid.id} onSelect={setSelectedKidId} />
       </div>
     )
   }
