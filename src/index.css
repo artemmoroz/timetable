@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+
+  --color-ios-bg: #F2F2F7;
+  --color-ios-bg-dark: #000000;
+  --color-ios-card: #FFFFFF;
+  --color-ios-card-dark: #1C1C1E;
+  --color-ios-card-secondary: #E5E5EA;
+  --color-ios-blue: #007AFF;
+  --color-ios-green: #34C759;
+  --color-ios-orange: #FF9500;
+  --color-ios-red: #FF3B30;
+  --color-ios-purple: #AF52DE;
+  --color-ios-pink: #FF2D55;
+  --color-ios-teal: #5AC8FA;
+  --color-ios-label: #000000;
+  --color-ios-label-secondary: rgba(60, 60, 67, 0.6);
+  --color-ios-label-tertiary: rgba(60, 60, 67, 0.3);
+  --color-ios-separator: rgba(60, 60, 67, 0.29);
+}
+
+:root {
+  color-scheme: light;
+}
+
+html, body {
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ios-bg);
+  color: var(--color-ios-label);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100dvh;
+  min-height: 100vh;
+}
+
+* {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input, textarea {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.tap-scale {
+  transition: transform 0.12s ease, opacity 0.12s ease;
+}
+.tap-scale:active {
+  transform: scale(0.96);
+  opacity: 0.75;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.animate-pulse-dot {
+  animation: pulse-dot 1.6s ease-in-out infinite;
+}
